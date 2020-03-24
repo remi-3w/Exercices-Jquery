@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Test JQuery</title>
+
+
+</head>
+
+<!-- Exercice 1 : click(), css() et add()
+Créer une bordure rouge de 2px autour de deux textareas
+qui s'affichera au clic sur un bouton.
+Puis ajouter deux paragraphes à l'objet jQuery avec une
+bordure rouge de 2px au clic sur le même bouton.
+
+
+Exercice 2 : add() et appendTo()
+Créer un élément contenant du texte ajouté après un
+paragraphe
+
+
+Exercice 3 : click(), css() et html()
+Afficher la couleur du fond d'un des quatre div en cliquant
+sur un div.
+Exemple de quatre div :
+<div style="background-color:red;"></div>
+<div style="background-color:rgb(16,99,30);"></div>
+<div style="background-color:#523456;"></div>
+<div style="background-color:#a11;"></div>
+
+Exercice 4 : last() et addClass()
+Mettre une couleur de fond orange au dernier des 3
+paragraphes
+Exemple :
+<p>HTML</p>
+<p>JavaScript</p>
+<p>CSS</p>
+
+Exercice 5 : click(), addClass()
+Changer la couleur du texte et du fond d'un div au clic sur
+un bouton.
+Exercice 6 : click() et afer()
+Ajouter du texte après un paragraphe au clic sur un bouton. -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<body>
+  <h1>Excercice 1</h1>
+  <button id="1" >afficher les text area</button>
+  <p class="texte">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis harum cumque assumenda maxime quo commodi temporibus obcaecati! Eaque fuga quis nulla delectus id provident perferendis hic asperiores labore, sed sapiente?</p>
+  <p class="texte" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea doloremque illo, architecto, obcaecati quo accusantium debitis mollitia aut commodi ipsum maiores et maxime! Omnis quod blanditiis quos? Iste, nobis dolorem.</p>
+
+  <h1>Excercice 2</h1>
+  <button id="2">ajoute un  en dessous 1 paragraphe de Lorem Ipsum</button>
+  <p class="text2" ></p>
+
+  <h1>Excercice 3</h1>
+  <div id="div0"class="div"></div>
+  <div id="div2"class="div"></div>
+  <div id="div3"class="div"></div>
+  <div id="div4"class="div"></div>
+  
+
+  <h1>Excercice 4</h1>
+
+    <p>HTML</p>
+    <p>JavaScript</p>
+    <p>CSS</p>
+
+  <h1>Excercice 5</h1>
+  <button id="btn">Changer le couleur de fond et celle du texte</button>
+  <div id="div4"class="div"> Blabla</div>
+
+
+
+  <h1>Excercice 6</h1>
+    
+    
+    
+    <!-- <script src="js/jquery.js"></script> -->
+    <script>
+       $( '#1').on('click', function(){
+        $('.texte').addClass('textearea');
+
+});
+      </script>
+      <script>
+        $("#2").on('click', function(){
+           
+        // $('<p>loremipsum</p>').appendTo('.text2');
+        $('.text2').append('<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi placeat rerum vitae unde blanditiis provident repellat nemo, consectetur natus officia, aliquam atque! Ab temporibus iusto perspiciatis architecto quae animi natus</p>');
+        
+        });
+
+        $('#div0').on('click',function(){
+         
+
+            $("#div0").css({"background-color": "red", "color" : "white"});
+
+
+        });
+
+        $( "p" ).last().css( "background-color", "orange" );
+
+        
+        
+        $('#btn').on('click',function(){
+        $(".div").addclass(".redw");
+
+        });
+        
+        
+        </script>
+
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</body>
+</html>
